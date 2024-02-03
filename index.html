@@ -31,15 +31,12 @@
 
    <!-- favicons
 	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">	
-</head>
-
+	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 
 
 <body id="top">
-
 	<!-- header 
    ================================================== -->
    <header>   	
@@ -105,7 +102,10 @@
 
          <li><a href="https://www.linkedin.com/in/kristian-roger-m-agdeppa-a84675246" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 
-         <li><a href="https://www.kaggle.com/avarice02" target="_blank"><i class="fa-brands fa-kaggle fa-sm"></i></a></li>
+		<li><a href="https://www.kaggle.com/avarice02" target="_blank"><i class="fa-brands fa-kaggle fa-sm"></i></a></li>
+
+		 <!-- <li><a href="https://www.kaggle.com/avarice02" target="_blank"><i class="fa-brands fa-blogger fa-lg"></i></a></li> -->
+
       </ul> <!-- /intro-social -->      	
 
    </section> <!-- /intro -->
@@ -146,7 +146,7 @@
    				</li>
    				<li>
    					<strong>Age</strong>
-   					<span>21</span>
+   					<span id="result"></span>
    				</li>
 				   <li>
 					<strong>Address</strong>
@@ -156,6 +156,30 @@
    					<strong>Email:</strong>
    					<span>kristianrogeragdeppa@pm.me</span>
    				</li>
+
+				<script>
+					// Define the constant birthdate (February 6, 2002)
+					var dob = new Date('2002-02-06');
+			
+					function calculateAge() {
+						// Get the current date
+						var currentDate = new Date();
+			
+						// Calculate the difference in years
+						var age = currentDate.getFullYear() - dob.getFullYear();
+			
+						// Check if the birthday has occurred this year
+						if (currentDate.getMonth() < dob.getMonth() || (currentDate.getMonth() === dob.getMonth() && currentDate.getDate() < dob.getDate())) {
+							age--;
+						}
+			
+						// Display the result in the HTML element with id="result"
+						document.getElementById("result").innerText = age;
+					}
+			
+					// Call the calculateAge function initially to display the age on page load
+					calculateAge();
+				</script>
 
    			</ul> <!-- /info-list -->
 
@@ -194,7 +218,7 @@
 
    	<div class="row button-section">
    		<div class="col-twelve">
-   			<a href="Resume.pdf" title="Download CV" class="button button-primary" download="CV" target="_blank">Download CV</a>
+   			<a href="Resume.pdf" title="Download CV" class="button button-primary" download="CV" target="_blank">Download Résumé</a>
    		</div>   		
    	</div>
 
@@ -234,7 +258,7 @@
 
 	   				<div class="timeline-header">
 	   					<h3>Data Encoder</h3>
-	   					<p>July 2020 - August 2022</p>
+	   					<p>April 2020 - May 2021</p>
 	   				</div>
 
 	   				<div class="timeline-content">
@@ -293,7 +317,7 @@
 
 	   				<div class="timeline-content">
 	   					<h4>University of Science and Technology of Southern Philippines</h4>
-	   					<p>Bachelor of Science in Data Science<br>
+	   					<p><b>Bachelor of Science in Data Science</b><br>
 							Dean's Lister (3rd Year - 1st Semester)<br>
 							Top 2 DS Dean's Lister (3rd Year - 2nd Semester)
 						</p>
@@ -314,7 +338,7 @@
 
 	   				<div class="timeline-content">
 	   					<h4>Liceo de Cagayan University</h4>
-	   					<p>Information and Communications Technology<br>
+	   					<p><b>Information and Communications Technology</b><br>
 							With Honors
 						</p>
 
@@ -354,77 +378,114 @@
 
 	         	<div class="bgrid folio-item">
 	               <div class="item-wrap">
-	               	<img src="images/portfolio/whatthefact.jpg" alt="whatthefact">
-	                  <a href="#modal-01" class="overlay">	                  	           
-	                     <div class="folio-item-table">
+						<img src="images/adware-bg.png" alt="adware">
+						<a href="#modal-01" class="overlay">	                  	           
+	                    <div class="folio-item-table">
 	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">Fake News Classification & Analysis</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  Machine Learning & EDA
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
+		     					<h3 class="folio-title">Predicting Adware Applications on Android Devices</h3>	     					    
+		     					<span class="folio-types">
+		     					    Machine Learning
+		     					</span>
+		     				</div>	                      	
+	                    </div>                    
+	                	</a>
 	               </div>	               
-	        		</div> <!-- /folio-item -->
+	        	</div> <!-- /folio-item -->
 
-	        		<div class="bgrid folio-item">
+	        	<div class="bgrid folio-item">
 	               <div class="item-wrap">
-	               	<img src="images/portfolio/energyefficiency.jpg" alt="energyefficiency">
-	               	<a href="#modal-02" class="overlay">              		                  
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Energy Efficiency Analysis</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Machine Learning & EDA
-		     					      </span>		     		
-		     					   </div> 	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
+						<img src="images/baybayin.png" alt="baybayin">
+						<a href="#modal-02" class="overlay">              		                  
+	                	<div class="folio-item-table">
+	                    	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Application of Convolutional Neural Network for Baybayin Character Recognition</h3>	     					    
+		     					<span class="folio-types">
+		     					    Deep Learning
+		     					</span>		     		
+		     				</div> 	                      	
+	                	</div>                    
+	                	</a>
+	            	</div>
+					
+	        	</div> <!-- /folio-item -->
 
-	            
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						 <img src="images/clinic.png" alt="uti-diagnosis">
+						 <a href="#modal-03" class="overlay">              		                  
+						 <div class="folio-item-table">
+							 <div class="folio-item-cell">
+								  <h3 class="folio-title">Optimizing UTI Diagnosis with Machine Learning and Artificial Neural Network for Reducing Misdiagnoses</h3>	     					    
+								  <span class="folio-types">
+									  Exploratory Data Analysis, Machine Learning & Deep Learning
+								  </span>		     		
+							  </div> 	                      	
+						 </div>                    
+						 </a>
+					 </div>
+					 
+				 </div> <!-- /folio-item -->
 
 	            <!-- modal popups - begin
 	            ============================================================= -->
 	            <div id="modal-01" class="popup-modal slider mfp-hide">	
 
-				     	<div class="media">
-				     		<img src="images/portfolio/whatthefact.jpg" alt="" />
-				     	</div>      	
+				    <div class="media">
+				     		<img src="images/adware-bg.png" alt="" />
+				    </div>
 
-					   <div class="description-box">
-					      <h4>Fake News Classification & Analysis</h4>		      
-					      <p style="text-align: justify;">The analysis of the FakeNewsNet dataset using K-Nearest Neighbors (KNN) reveals that the model achieved its highest validation accuracy of 79% with n_neighbors set to 5. However, the accuracy slightly decreased around n_neighbors 17 before increasing again. The model successfully exceeded the required accuracy threshold of 80%, indicating its effectiveness in classifying news articles as fake or real based on various features. Notably, tweet_num, title length, and news_url_length are important features for the KNN model. The analysis also highlights that certain popular websites, such as Wikipedia, play a significant role in spreading both real and fake news, emphasizing the need for caution when trusting news sources and the impact of public opinion on their credibility.</p>
+					<div class="description-box">
+					    <h4>Predicting Adware Applications on Android Devices</h4>		      
+					    <p style="text-align: justify;">Android smartphones are widely used, and the fact that Android applications are open-source increases the risk of security breaches. Malware and Potentially Unwanted Applications (PUAs) are rapidly increasing, a significant concern for Android users. Millions of instances have been reported, and the risk is further intensified by adware, a form of advertising software that displays unwanted ads and disrupts the user experience. This creates a twofold issue, where malware and adware significantly threaten user privacy, device performance, and overall user experience. The large number of malicious applications found annually emphasizes the need for proactive measures to detect and prevent these dangers before they cause substantial harm. Additionally, adware deserves attention as it disrupts the user experience and detecting, preventing, and mitigating it is challenging.</p>
+						<p style="text-align: justify;">Therefore, the project aims to create efficient machine-learning models for adware applications on Android devices. This will specifically design a machine learning model suitable for predicting adware applications, assess its performance metrics, and interpret the features and patterns of the prediction clearly.</p>
 
-					      <div class="categories">Machine Learning & EDA</div>			               
-					   </div>
+					    <div class="categories">Machine Learning</div>
+						<a href="https://github.com/kr-agdeppa/Adware-Classification" target="_blank"><i class="fa fa-github"></i></a>               
+					</div>
 
-			         <div class="link-box">
+			        <div class="link-box">
 					    <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
+			        </div>		      
 
-				   </div> <!-- /modal-01 -->
+				</div> <!-- /modal-01 -->
 
-				   <div id="modal-02" class="popup-modal slider mfp-hide">	
+				<div id="modal-02" class="popup-modal slider mfp-hide">	
 
-				     	<div class="media">
-				     		<img src="images/portfolio/energyefficiency.jpg" alt="" />
-				     	</div>      	
+				    <div class="media">
+				     	<img src="images/baybayin.png" alt="" />
+				    </div>      	
 
-					   <div class="description-box">
-					      <h4>Energy Efficiency Analysis</h4>		      
-					      <p style="text-align: justify;">The kNN regression model provides important insights for optimizing energy efficiency in building heating and cooling loads. It identifies key features influencing these loads through correlation analysis, showing a slight improvement when adding more attributes. The model performs best with five features and achieves high accuracy when n_neighbor is 22. Importantly, it doesn't overfit, suggesting generalizability to new data. Overall, this model offers valuable information to improve energy consumption in the face of climate challenges, especially in the rapidly developing Philippines, where prioritizing energy efficiency is crucial for sustainable growth and development. Government officials should consider leveraging technological advancements to create a sustainable and energy-saving environment.</p>
+					<div class="description-box">
+					    <h4>Application of Convolutional Neural Network for Baybayin Character Recognition</h4>		      
+					    <p style="text-align: justify;">Baybayin is a pre-colonial script indigenous to the Philippines, used primarily for writing Tagalog and other native languages. It's an abugida system with 17 basic characters, representing consonants with inherent vowel sounds. Following Spanish colonization, Baybayin saw a decline, but in recent years, it has experienced a revival in efforts to preserve and promote it as a symbol of Filipino cultural heritage, representing the nation's pre-colonial identity</p>
+						<p style="text-align: justify;">The main objective of this study is to automate the conversion of hand-drawn Baybáyin characters using deep neural networks. One way to design an automated character recognition system is to build a deep neural network that can yield high accuracy in the classification of hand-drawn characters of this ancient script.</p>
+					    <div class="categories">Deep Learning</div>
+						<a href="https://github.com/kr-agdeppa/Baybayin-Character-Recognition" target="_blank"><i class="fa fa-github"></i></a>
+					</div>
 
-					      <div class="categories">Machine Learning & EDA</div>			               
-					   </div>
+			        <div class="link-box">
+					    <a href="#" class="popup-modal-dismiss">Close</a>
+			        </div>		      
+				</div> <!-- /modal-02 -->
 
-			         <div class="link-box">
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
+				<div id="modal-03" class="popup-modal slider mfp-hide">	
 
-				   </div> <!-- /modal-02 -->
+				    <div class="media">
+				     	<img src="images/clinic.png" alt="" />
+				    </div>      	
+
+					<div class="description-box">
+					    <h4>Optimizing UTI Diagnosis with Machine Learning and Artificial Neural Network for Reducing Misdiagnoses</h4>		      
+					    <p style="text-align: justify;">The burden of Urinary tract infections (UTIs) extends beyond the healthcare system, as it significantly impacts individuals' quality of life and productivity. UTIs are a widespread and recurrent health problem that affects millions of individuals worldwide and can have various adverse effects on individuals, ranging from mild discomfort to severe complications. They can lead to significant morbidity and even mortality, especially among vulnerable populations such as the elderly, pregnant women, and individuals with compromised immune systems. UTI symptoms can have a crucial impact on an individual's physical and emotional well-being, disrupting daily activities and sleep patterns. Moreover, UTI can affect an individual's productivity, leading to absences from work or school leading to decreased performance.</p>
+						<p style="text-align: justify;">TThe general objective of the study is to develop a robust classification model that can analyse urinalysis test results to enhance the accuracy of UTI diagnosis by reducing false-positive and false-negative patients with utilizing machine learning models and artificial neural network for UTI diagnosis. </p>
+					    <div class="categories">Exploratory Data Analysis, Machine Learning & Deep Learning</div>
+						<a href="https://github.com/kr-agdeppa/UTI-Diagnosis-Classification" target="_blank"><i class="fa fa-github"></i></a>
+					</div>
+
+			        <div class="link-box">
+					    <a href="#" class="popup-modal-dismiss">Close</a>
+			        </div>		      
+				</div> <!-- /modal-03 -->
 
 
 				   <!-- modal popups - end
@@ -462,7 +523,6 @@
    			<h5>Where to find me</h5>
 
    			<p>
-            Kauswagan<br>
             Cagayan de Oro<br>
             Philippines
             </p>
@@ -493,7 +553,7 @@
 
    			<p>
 			   	Mobile: (+63) 998 343 4158<br>
-			   </p>
+			</p>
 
    		</div>
    		
