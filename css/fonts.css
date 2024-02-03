@@ -168,7 +168,7 @@ input {
     display: block;
     width: 100%;
     height: 12%;
-    background: #FF0077;
+    background: #D94A3D;
     content: '';
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   }
@@ -209,7 +209,7 @@ input {
     left: 0;
     z-index: -1;
     width: 25em;
-    background: #3E8C76;
+    background: #D94A3D;
     content: '';
     transform: skewX(15deg) translateX(-100%);
     transform-origin: bottom left;
@@ -251,7 +251,7 @@ input {
     transition-delay: 0s, 350ms;
   }
   nav a:hover, nav a:focus {
-    color: #D9B504;
+    color: #FFFFFF;
   }
   main {
     overflow: hidden;
