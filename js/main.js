@@ -332,7 +332,7 @@
 
 })(jQuery);
 
-const words = ["Innovator", "Data-centric", "Pioneer", ""];
+const words = ["Innovator", "Data-centric", "Pioneer", "Pragmatic"];
 const typingElement = document.getElementById("typing");
 let wordIndex = 0;
 let charIndex = 0;
