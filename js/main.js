@@ -332,7 +332,7 @@
 
 })(jQuery);
 
-const words = ["Hello, World!", "哈罗世界", "हैलो वर्ल्ड", "¡Hola, Mundo!"];
+const words = ["Innovator", "Data-centric", "Pioneer", ""];
 const typingElement = document.getElementById("typing");
 let wordIndex = 0;
 let charIndex = 0;
