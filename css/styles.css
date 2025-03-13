@@ -4006,48 +4006,6 @@ html.no-csstransitions .s-hero__content {
 
 
 
-/* ===================================================================
- * # about
- *
- * ------------------------------------------------------------------- */
-.s-about {
-    background-color: var(--color-bg);
-    padding-top: calc(7 * var(--space));
-    padding-bottom: 0;
-    position: relative;
-}
-
-.s-about::before {
-    content: "";
-    display: block;
-    width: 28rem;
-    height: 17.6rem;
-    background-image: url(../images/about-photo.png);
-    opacity: .25;
-    position: absolute;
-    top: 0;
-    left: 50%;
-}
-
-.s-about .horizontal-line {
-    width: 32px;
-    height: 20rem;
-    position: absolute;
-    top: -7rem;
-    left: calc(6vw + 1px);
-}
-
-.s-about .horizontal-line::before {
-    content: "";
-    display: block;
-    width: 1px;
-    background-color: var(--color-1-darker);
-    position: absolute;
-    right: calc(50% + 1px);
-    top: 0;
-    bottom: 0;
-}
-
 
 /* ------------------------------------------------------------------- 
  * ## about photo
