@@ -4056,7 +4056,7 @@ html.no-csstransitions .s-hero__content {
     position: relative;
 }
 
-/* .s-about__photo {
+.s-about__photo {
     background-image: url(../images/about-photo.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -4067,7 +4067,7 @@ html.no-csstransitions .s-hero__content {
     left: var(--gutter-lg);
     bottom: var(--vspace-1);
 }
- */
+ 
 .s-about__photo {
     width: 100%; /* Ensures the container takes full available width */
     max-width: 100%; /* Prevents overflow */
