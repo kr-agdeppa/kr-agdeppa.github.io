@@ -4052,35 +4052,41 @@ html.no-csstransitions .s-hero__content {
 /* ------------------------------------------------------------------- 
  * ## about photo
  * ------------------------------------------------------------------- */
+
 .s-about__photo-block {
     position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* Prevents any overflow issues */
 }
 
 .s-about__photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: var(--vspace-1); /* Maintains your spacing */
+    margin: 0 var(--gutter-lg); /* Uses your gutter variables for left/right spacing */
+}
+
+/* For img tag approach (use this if you're using an <img> element) */
+.s-about__photo img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain; /* Shows full image without cropping */
+}
+
+/* OR for background image approach (use this if you're using background-image) */
+.s-about__photo.background-version {
     background-image: url(../images/about-photo.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: var(--vspace-0_5);
-    right: var(--gutter-lg);
-    left: var(--gutter-lg);
-    bottom: var(--vspace-1);
+    background-size: contain; /* Changed from cover to contain */
+    width: 100%;
+    height: auto;
+    padding-bottom: 56.25%; /* Optional: maintains aspect ratio (16:9 example) */
 }
- 
-.s-about__photo {
-    width: 100%; /* Ensures the container takes full available width */
-    max-width: 100%; /* Prevents overflow */
-    overflow: hidden; /* Hides any excess image that might spill over */
-}
-
-.s-about__photo img {
-    width: 100%; /* Makes the image fill the container */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Removes any unwanted spacing below the image */
-    object-fit: contain; /* Ensures the full image is visible without cropping or zooming */
-}
-
 /* ------------------------------------------------------------------- 
  * ## about process
  * ------------------------------------------------------------------- */
