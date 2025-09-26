@@ -4734,7 +4734,7 @@ html.no-csstransitions .s-hero__content {
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 1600px) {
     .s-contact__email {
-        font-size: calc(var(--text-size) * 6);
+        font-size: calc(var(--text-size) * 4);
     }
 }
 
