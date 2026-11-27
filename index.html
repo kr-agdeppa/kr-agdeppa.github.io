@@ -1,559 +1,87 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>My Portfolio</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/vendor.css">
-
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script defer src="js/fontawesome/all.min.js"></script>
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
-    <link rel="manifest" href="site.webmanifest">
-
-    <link rel="icon" type="image/png" href="images\xing.png">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kristian Roger Agdeppa | Data Science &amp; Business Intelligence</title>
+  <meta name="description" content="Explore Kristian Roger Agdeppa’s work in Philippine real estate analytics, machine learning, and business intelligence.">
+  <link rel="icon" href="images/xing.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
-
 <body id="top">
-
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="wrap">
+    <a class="brand" href="#top"><span class="monogram" aria-hidden="true">ka.</span> Kristian Agdeppa</a>
+    <nav aria-label="Main navigation">
+      <a href="#portfolio">Work</a><a href="#about">About</a><a href="#services">Résumé</a><a class="contact-link" href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="hero" class="hero wrap" aria-labelledby="name">
+      <div>
+        <p class="label role"><span aria-hidden="true"></span> Data science &amp; business intelligence</p>
+        <h1 id="name">Kristian Roger<br><em>Agdeppa.</em></h1>
+        <p class="intro">I turn trading data, financial reports, and research datasets into dashboards and models that help people make decisions.</p>
+        <div class="actions"><a class="button" href="#portfolio">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="resume/Agdeppa_KristianRoger_CV.pdf">View CV</a></div>
+      </div>
+      <figure class="surface">
+        <img src="images/surface.webp" alt="" width="1000" height="704">
+        <figcaption><span>Surface study</span><span>3D wireframe</span></figcaption>
+      </figure>
+    </section>
+    <section id="portfolio" class="work"><div class="wrap">
+      <h2>Selected work<span>.</span></h2>
+      <article class="feature">
+        <a class="cover" href="https://public.tableau.com/app/profile/kristian.agdeppa/viz/PHRealEstateInvestmentTrust/Summary" aria-label="Open the Philippine REIT dashboard"><img src="images/portfolio/robinsons-work@2.jpg" alt="Illuminated retail complex at dusk" width="1400" height="932"></a>
+        <div class="feature-body"><p class="label">Finance / Data visualization</p>
+          <h3>Philippine REIT dashboard</h3>
+          <p>I built this Tableau dashboard to explore a question I had as an investor. How do Philippine real estate investment trusts compare on revenue, dividends, and occupancy?</p>
+          <a class="text-link" href="https://public.tableau.com/app/profile/kristian.agdeppa/viz/PHRealEstateInvestmentTrust/Summary">Explore dashboard</a>
         </div>
-    </div>
-
-
-    <!-- header
-    ================================================== -->
-    <header class="s-header">
-
-        <div class="s-header__logo">
-            <a href="index.html">
-                <img src="images/xing.svg" alt="Homepage">
-            </a>
-        </div>
-
-        <div class="s-header__content">
-    
-            <nav class="s-header__nav-wrap">
-                <ul class="s-header__nav">
-                    <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="About">About</a></li>
-                    <li><a class="smoothscroll" href="#services" title="Services">Resume</a></li>
-                    <li><a class="smoothscroll" href="#portfolio" title="Works">Works</a></li>
-                </ul>
-            </nav> <!-- end s-header__nav-wrap -->
-
-            <a href="mailto:kristianrogeragdeppa@pm.me" class="btn btn--primary btn--small">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
-                Get In Touch
-            </a>
-
-        </div> <!-- end header-content -->
-
-        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-
-    </header> <!-- end s-header -->
-
-
-    <!-- hero
-    ================================================== -->
-    <section id="hero" class="s-hero target-section">
-
-        <script src="app.js"></script>
-        <script src="particle.js"></script>
-
-        <div class="s-hero__bg">
-            <div class="gradient-overlay"></div>
-        </div>
-
-        <div class="row s-hero__content">
-            <div class="column">
-                <div class="typing-container">
-                    <h1 style="font-size:15.15rem;" id="typing"></span>
-                    <h1 class="cursor">|</span>
-                </div>
-                <div class="s-hero__content-about">
-                    <p>
-                    Hi! I'm Kristian, and I am a passionate data science professional who seeks to
-                    harness the powers of data science to drive innovation and success through data-driven solutions.</p>
-                    <footer>
-                        <div class="s-hero__content-social">
-                            <a href="https://www.linkedin.com/in/kristian-roger-m-agdeppa-a84675246"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                            <a href="https://www.kaggle.com/avarice02"><i class="fab fa-kaggle" aria-hidden="true"></i></a>
-                            <a href="https://github.com/kr-agdeppa"><i class="fab fa-github" aria-hidden="true"></i></a>
-                        </div>
-                    </footer>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="s-hero__scroll">
-            <a href="#about" class="s-hero__scroll-link smoothscroll">
-                Scroll Down
-            </a>
-        </div>
-
-    </section> <!-- end s-hero -->
-
-
-    <!-- about
-    ================================================== -->
-    <section id="about" class="s-about">
-
-        <div class="horizontal-line"></div>
-
-        <div class="row">
-            <div class="column large-12">
-
-                <div class="section-title" data-num="01" data-aos="fade-up">
-                    <h3 class="h6">Who Am I</h3>
-                </div>
-
-            </div>
-
-            <div class="column large-6 w-900-stack s-about__intro-text">
-                <h1 class="display-1" data-aos="fade-up">
-                    Everything about data.
-                </h1>
-
-                <p class="lead" data-aos="fade-up">
-                    I specialize in driving business innovation by leveraging the power of data science to enhance operational efficiency and optimize overall company performance.
-
-                    I am looking forward to using my data science skills in finance and investments in the future. I am currently self-studying for CFA level I topics to equip myself
-                    with the right tools and skills to bridge the gap. Moreover, I'm passionate in data visualization and programming, aiming to solve business problems using these tools
-                    and skillset.
-                </p>
-            </div>
-
-            <div class="column large-6 w-900-stack s-about__photo-block">
-                <div class="s-about__photo" data-aos="fade-up"></div>
-            </div>
-
-            
-            <h3 class="h6">‎ ‎ ‎ Technical Skills & Tools</h3>
-        </div>
-        <div class="row block-large-1-2 block-tab-full s-about__process item-list">
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Python</h3>
-                <ul>
-                    <li>Exploratory Data Analysis</li>
-                    <li>Machine Learning</li>
-                </ul>                
-            </div>
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">SQL</h3>
-                <ul>
-                    <li>SQL Server</li>
-                    <li>MySQL</li>
-                </ul>
-            </div>
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Data Visualization & Reporting</h3>
-                <ul>
-                    <li>Power BI</li>
-                    <li>Tableau</li>
-                    <li>Metabase</li>
-                    <li>PowerPoint</li>
-                </ul>
-            </div>
-        </div>
-    </section> <!-- end s-about -->
-
-    <!-- services
-    ================================================== -->
-    <section id="services" class="s-services">
-
-        <div class="row">
-            <div class="column large-12">
-                <div class="section-title" data-num="02" data-aos="fade-up">
-                    <h3 class="h6">My Resume</h3>
-                </div>
-            </div>
-            <div class="column large-6 w-900-stack">
-                <h1 class="display-1" data-aos="fade-up">
-                    Below is a summary of my professional experience and academic background.
-                </h1>
-            </div>
-            <!-- <div class="column large-6 w-900-stack">
-                <p class="lead" data-aos="fade-up">
-                Velit deleniti harum sit beatae sint repellendus expedita. Omnis possimus 
-                sed rerum tenetur ea ab aut minima magnam. Deserunt sit cupiditate 
-                similique eveniet earum. Consectetur dolores maxime quisquam voluptate magni.
-                Ut ex unde rem quod ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div> -->
-
-        </div>
-        <div class="row">
-            <h3 class="h6">‎ ‎ ‎ Professional Experience</h3>
-        </div>
-        <div class="row block-large-1-2 block-tab-full s-services__services item-list">
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--illustration"></span>
-                <h3 class="item-title">Business Analyst</h3>
-                <h3 class="h6">‎<i>Greenergy Development Corp.</i></h3>
-                <p>
-                    Utilized JavaScript with Google Apps Script to design and develop a tracking and approval system
-                    using the Gmail API, automated 6 procedures across the finance and procurement department.
-                    Streamlined processes with a data-driven approach for bottleneck analysis, resulting in improved
-                    workflow efficiency.
-                    <br>
-                    <br>
-                    Designed a data retrieval algorithm and developed dashboards in Google Sheets and Tableau
-                    that allowed the top management to monitor the deliverables of each department which
-                    resulted in 20% faster completion of deliverables
-                    <br>
-                    <br>
-                    Perform ad-hoc data analysis and data-driven recommendations to C-level executives anddepartment heads for business problem solving and analysis
-                </p>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--frontend"></span>
-                <h3 class="item-title">Business Intelligence Officer</h3>
-                <h3 class="h6">‎<i>AI-BI Ltd.</i></h3>
-                <p>
-                    Developed and optimized SQL queries, Power BI and Metabase dashboards to analyze largescale MT4/MT5 trading data, delivering actionable insights for trading operations, businessperformance, and specific platform abuse
-                    <br>
-                    <br>
-                    Built reports using Power BI and Metabase using trading data from MT4/MT5 and Tradelocker, provided analysis for profit & loss, user trading activities, summary on commissions, swaps, and lots
-                    <br>
-                    <br>
-                    Performed quality assurance tests on newly built and developing dashboards and reconciliation for user equity/balance and trading activities that ensured utmost quality for published reports.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <h3 class="h6">‎ ‎ ‎ Academic Background</h3>
-        </div>
-        <div class="row block-large-1-2 block-tab-full s-services__services item-list">
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--product-design"></span>
-                <h3 class="item-title">Bachelor of Science in Data Science</h3>
-                <h3 class="h6">‎<i>University of Science and Technology of Southern Philippines</i></h3>
-                <p>
-                Cum Laude
-                </p>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--ecommerce"></span>
-                <h3 class="item-title">Certified Lean Six Sigma Yellow Belt</h3>
-                <h3 class="h6">‎<i>Advance Innovation Group Pro Excellence</i></h3>
-                <a href="https://digitalcredentials.aigproexcellence.com/en/verify/72927388984433"><p>View Credential</p></a>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--ecommerce"></span>
-                <h3 class="item-title">CFA Investment Foundations</h3>
-                <h3 class="h6">‎<i>CFA</i></h3>
-                <a href="https://credentials.cfainstitute.org/7b4fb842-3075-4b38-bade-f4b0e48187b7#acc.wVolqLAy"><p>View Credential</p></a>
-            </div>
-            <!-- <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--research"></span>
-                <h3 class="item-title">UX Research</h3>
-                <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--illustration"></span>
-                <h3 class="item-title">Illustration</h3>
-                <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--ecommerce"></span>
-                <h3 class="item-title">E-Commerce</h3>
-                <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div> -->
-        </div>
-        <div class="center-link">
-            <a href="resume\Agdeppa_KristianRoger_CV.pdf" title="Download CV" class="btn btn--primary btn--small">
-                View Resumé
-            </a>
-        </div>
-    </section> <!-- end s-services -->
-
-    <section id="portfolio" class="s-portfolio">
-
-        <div class="row s-porfolio__top">
-            <div class="column large-6 w-900-stack">
-                <div class="section-title" data-num="03" data-aos="fade-up">
-                    <h3 class="h6">Recent Works</h3>
-                </div>
-            </div>
-            <div class="column large-6 w-900-stack">
-                <h1 class="display-1" data-aos="fade-up">
-                    Here are some of the recent projects I have completed. Please feel free to explore them.
-                </h1>
-            </div>
-        </div> <!-- end s-portfolio__top-->
-
-        <!-- start portfolio 1: UTI DIAGNOSIS -->
-        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/uti-pic-work.jpg" title="The Red Wheel" data-size="1050x700">
-                            <img src="images/portfolio/uti-pic-work.jpg" 
-                                 srcset="images/portfolio/uti-pic-work.jpg 1x, images/portfolio/uti-pic-work@2.jpg 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Bioinformatics</div>
-                        <h4 class="folio-item__title">Optimizing UTI Diagnosis with Machine Learning and Artificial Neural Networks for Reducing Misdiagnoses</h4>
-                    </div>
-
-                    <a href="https://github.com/kr-agdeppa/UTI-Diagnosis-Classification" title="Project Link" class="folio-item__project-link">Project Repository</a>
-
-                    <div class="folio-item__caption">
-                        <p>The objective of the project is to develop a robust classification model that can analyse urinalysis test results 
-                            to enhance the accuracy of UTI diagnosis by reducing false-positive and false-negative patients with 
-                            utilizing machine learning models and artificial neural network for UTI diagnosis.</p>
-                    </div>
-
-                </div>
-            </div> <!-- end portfolio 2: UTI DIAGNOSIS -->
-
-            <div class="column" data-aos="fade-up"> <!-- start portfolio 2: BAYBAYIN CLASSIFICATION -->
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/baybayin-work.jpg" title="Click to learn more" data-size="1050x700">
-                            <img src="images/portfolio/baybayin-work.jpg" 
-                                 srcset="images/portfolio/baybayin-work.jpg 1x, images/portfolio/baybayin-work@2.jpg 2x" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Linguistic</div>
-                        <h4 class="folio-item__title">Baybayin Character Recognition Using Convolutional Neural Network</h4>
-                    </div>
-                    <a href="https://github.com/kr-agdeppa/Baybayin-Character-Recognition" title="Project Link" class="folio-item__project-link">Project Repository</a>
-                    <div class="folio-item__caption">
-                        <p>In this repository, the researchers designed the Convolutional Neural Network (CNN) for recognizing handwritten baybayin characters. The study involved hyperparameter tuning using Optuna and after identifying the optimal hyperparameters, the model was then trained using the optimal hyperparaeters and tested using the hold-out set.</p>
-                    </div>
-                </div>
-
-            </div> <!-- end portfolio 2: BAYBAYIN CLASSIFICATION -->
-
-            <div class="column" data-aos="fade-up"> <!-- start portfolio 3: ADWARE CLASSIFICATION -->
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/adware-work.jpg" Title="Click to learn more" data-size="1050x700">
-                            <img src="images/portfolio/adware-work.jpg" 
-                                 srcset="images/portfolio/adware-work.jpg 1x, images/portfolio/adware-work@2.jpg 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Cybersecurity</div>
-                        <h4 class="folio-item__title">Predicting Adware Applications on Android Devices</h4>
-                    </div>
-
-                    <a href="https://github.com/kr-agdeppa/Adware-Classification" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Mobile apps have become essential as digital transactions like e-commerce, eHealth, and payments become more prevalent. 
-                            Meanwhile, advertisements have gone digital and can be seen while browsing websites or using mobile apps. 
-                            Most smartphones run on the Android platform, resulting in a vast ecosystem of apps. 
-                            Despite its rapid expansion, the prevalence of adware applications are increasing. </p>
-                    </div>
-
-                </div>
-            </div> <!-- end portfolio 3: ADWARE CLASSIFICATION -->
-
-            <div class="column" data-aos="fade-up"> <!-- start portfolio 3: ADWARE CLASSIFICATION -->
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/robinsons-work.jpg" Title="Click to learn more" data-size="1050x700">
-                            <img src="images/portfolio/robinsons-work.jpg" 
-                                 srcset="images/portfolio/adware-work.jpg 1x, images/portfolio/robinsons-work@2.jpg 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Data Visualization</div>
-                        <h4 class="folio-item__title">PH Real Estate Investment Trust</h4>
-                    </div>
-
-                    <a href="https://public.tableau.com/app/profile/kristian.agdeppa/viz/PHRealEstateInvestmentTrust/Summary" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>I've been an investor in Philippine REITs for a while, and I noticed there weren't many published dashboards dedicated to analyzing them. So, I decided to create one myself—both as a fun project and as a way to uncover deeper insights.
-
-                            My goal was to go beyond simply reporting numbers, and instead highlight insights that can guide better business and investment decisions.
-                            
-                            The dashboard contains annual and quarterly revenue, EBITDA margin, quarterly dividend payments, GLA, WALE, occupancy rate and other key REIT metric.</p>
-                    </div>
-
-                </div>
-            </div> <!-- end portfolio 3: ADWARE CLASSIFICATION -->
-
-        </div> <!-- folio-list -->
-
-    </section> <!-- end s-portfolio -->
-
-
-    <!-- clients
-    ================================================== -->
-    <div id="clients" class="section s-clients">
-    </div> <!-- end s-clients -->
-
-
-    <!-- contact
-    ================================================== -->
-    <section class="s-contact">
-
-        <div class="row narrower s-contact__top h-text-center">
-            <div class="column">
-                <h3 class="h6">Get In Touch</h3>
-                <h1 class="display-1">
-                Do you have an idea or a project in mind? Let's collaborate and create something amazing! Contact me at
-                </h1>
-            </div>
-        </div> <!-- s-footer__top -->
-
-        <div class="row h-text-center">
-            <div class="column">
-                <p class="s-contact__email">
-                    <a href="mailto:kristianrogeragdeppa@pm.me">kristianrogeragdeppa@pm.me</a>
-                </p>
-            </div>
-        </div>
-
-    </section>  <!-- end s-contact -->
-
-
-    <!-- footer
-    ================================================== -->
-    <footer class="s-footer">
-        <div class="row row-y-top">
-
-            <div class="column large-8 medium-12">
-                <div class="row">
-                    <div class="column large-7 tab-12 s-footer__block">
-                        <h4 class="h6">Where to Find Me</h4>
-        
-                        <p>
-                        Misamis Oriental <br>
-                        Philippines <br>
-                        <a href="tel:+63 998-3424-158">+63 998 3424 158</a>
-                        </p>
-                    </div>
-        
-                    <div class="column large-5 tab-12 s-footer__block">
-                        <h4 class="h6">Follow Me</h4 class="h6">
-        
-                        <ul class="s-footer__list">
-                            <li><a href="https://www.linkedin.com/in/kristian-roger-m-agdeppa-a84675246">LinkedIn</a></li>
-                            <li><a href="https://www.kaggle.com/avarice02">Kaggle</a></li>
-                            <li><a href="https://github.com/kr-agdeppa">Github</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column large-4 medium-12 s-footer__block--end">
-                <a href="mailto:#kristianrogeragdeppa@pm.me" class="btn h-full-width">Let's Talk</a>
-
-                <div class="ss-copyright">
-                    <span>Copyright Flare 2020</span> 
-                    <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
-                    <span>Revamped by <a class="smoothscroll" href="#about"><u>Me :3</u></a></span>
-                </div>
-            </div>
-
-            <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top">
-                    top
-                </a>
-            </div> <!-- end ss-go-top -->
-
-        </div>
-    </footer>
-    
-
-    <!-- photoswipe background
-    ================================================== -->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
-                    "Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
-                "Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
-
-        </div>
-
-    </div> <!-- end photoSwipe background -->
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
+      </article>
+      <div class="projects">
+        <article class="project">
+          <img loading="lazy" src="images/portfolio/uti-pic-work@2.jpg" alt="" width="1400" height="933">
+          <p class="label">Bioinformatics</p><h3>Classifying UTI test results</h3>
+          <p>Exploring how machine learning and neural networks classify urinalysis results, with a focus on false positives and false negatives.</p><a class="text-link" aria-label="View repository for Classifying UTI test results" href="https://github.com/kr-agdeppa/UTI-Diagnosis-Classification">View repository</a>
+        </article>
+        <article class="project">
+          <img loading="lazy" src="images/portfolio/baybayin-work@2.jpg" alt="" width="1400" height="933">
+          <p class="label">Computer vision</p><h3>Reading handwritten Baybayin</h3>
+          <p>Training a convolutional neural network to recognize handwritten Baybayin characters, with Optuna for tuning and a held-out set for evaluation.</p><a class="text-link" aria-label="View repository for Reading handwritten Baybayin" href="https://github.com/kr-agdeppa/Baybayin-Character-Recognition">View repository</a>
+        </article>
+        <article class="project">
+          <img loading="lazy" src="images/portfolio/adware-work@2.jpg" alt="" width="1400" height="933">
+          <p class="label">Cybersecurity</p><h3>Detecting Android adware</h3>
+          <p>A classification project exploring how to distinguish Android adware from other mobile applications.</p><a class="text-link" aria-label="View repository for Detecting Android adware" href="https://github.com/kr-agdeppa/Adware-Classification">View repository</a>
+        </article>
+      </div>
+    </div></section>
+    <section id="about" class="wrap section split">
+      <div><h2>About me<span>.</span></h2><img class="portrait" loading="lazy" src="images/about-photo.png" width="500" height="500" alt="Kristian Roger Agdeppa"></div>
+      <div><p class="lead">I’m a data science professional based in Misamis Oriental, Philippines.</p><p>My work spans trading analytics, business reporting, and workflow automation. I’m especially interested in applying data science to finance and investments, and I study CFA Level I topics independently.</p>
+        <h3 class="small-title">Tools I work with</h3>
+        <dl><dt>Analysis &amp; modeling</dt><dd>Python, exploratory data analysis, machine learning</dd><dt>Databases</dt><dd>SQL Server, MySQL</dd><dt>Visualization &amp; reporting</dt><dd>Power BI, Tableau, Metabase, PowerPoint</dd></dl>
+      </div>
+    </section>
+    <section id="services" class="wrap section split">
+      <div><h2>Résumé<span>.</span></h2><a class="text-link" href="resume/Agdeppa_KristianRoger_CV.pdf">View full CV (PDF)</a></div>
+      <div><h3 class="label">Professional experience</h3>
+        <article class="entry"><h4>Business Intelligence Officer</h4><b>AI-BI Ltd.</b><p>Built SQL reports and dashboards for MT4, MT5, and TradeLocker trading data. Analyzed profit and loss, commissions, swaps, and platform abuse, and reconciled balances to verify reports.</p></article>
+        <article class="entry"><h4>Business Analyst</h4><b>Greenergy Development Corp.</b><p>Automated six finance and procurement procedures with Google Apps Script and the Gmail API. Built dashboards that helped departments complete deliverables 20% faster.</p></article>
+        <h3 class="label education">Education &amp; credentials</h3>
+        <article class="entry"><h4>BS in Data Science</h4><p>University of Science and Technology of Southern Philippines · Cum laude</p></article>
+        <p><a class="text-link" href="https://digitalcredentials.aigproexcellence.com/en/verify/72927388984433">Lean Six Sigma Yellow Belt</a></p>
+        <p><a class="text-link" href="https://credentials.cfainstitute.org/7b4fb842-3075-4b38-bade-f4b0e48187b7#acc.wVolqLAy">CFA Investment Foundations</a></p>
+      </div>
+    </section>
+  </main>
+  <footer id="contact"><div class="wrap">
+    <h2>Get in touch<span>.</span></h2>
+    <a class="email" href="mailto:kristianrogeragdeppa@pm.me">kristianrogeragdeppa@pm.me</a>
+    <p><a href="tel:+639983424158">+63 998 3424 158</a></p>
+    <div class="foot"><span>Misamis Oriental, Philippines</span><nav aria-label="Social profiles"><a href="https://github.com/kr-agdeppa">GitHub</a><a href="https://www.linkedin.com/in/kristian-roger-m-agdeppa-a84675246">LinkedIn</a><a href="https://www.kaggle.com/avarice02">Kaggle</a></nav></div>
+  </div></footer>
 </body>
-
 </html>
