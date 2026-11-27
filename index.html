@@ -7,7 +7,7 @@
   <meta name="description" content="Explore Kristian Roger Agdeppa’s work in Philippine real estate analytics, machine learning, and business intelligence.">
   <link rel="icon" href="images/xing.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/portfolio.css?v=chart-2">
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -28,7 +28,208 @@
       <div class="market-chart" role="group" aria-label="Illustrative market chart">
         <input class="chart-pause" type="checkbox" id="pause-chart" aria-label="Pause chart animation">
         <label for="pause-chart" class="chart-control"><span aria-hidden="true"></span></label>
-        <div class="market-window" aria-hidden="true"><div class="market-series"></div></div>
+        <svg class="chart-plot" width="720" height="500" viewBox="0 0 720 500" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="market-panel" x2="1" y2="1"><stop stop-color="#1b4236"/><stop offset="1" stop-color="#102a24"/></linearGradient>
+            <pattern id="market-grid" width="81" height="56" patternUnits="userSpaceOnUse">
+              <path d="M0 56V0H81" fill="none" stroke="#39584b" stroke-width="2"/>
+            </pattern>
+            <g id="market-cycle">
+              <g fill="#78a89a">
+                <path d="M9 209V257" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="4" y="215" width="10" height="36" rx="1.3"/>
+                <rect x="4" y="298" width="10" height="26" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M27 231V262" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="22" y="240" width="10" height="11" rx="1.3"/>
+                <rect x="22" y="309" width="10" height="15" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M45 228V265" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="40" y="240" width="10" height="17" rx="1.3"/>
+                <rect x="40" y="305" width="10" height="19" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M63 232V270" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="58" y="240" width="10" height="17" rx="1.3"/>
+                <rect x="58" y="304" width="10" height="20" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M81 196V250" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="76" y="207" width="10" height="33" rx="1.3"/>
+                <rect x="76" y="295" width="10" height="29" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M99 200V232" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="94" y="207" width="10" height="18" rx="1.3"/>
+                <rect x="94" y="302" width="10" height="22" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M117 200V237" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="112" y="210" width="10" height="15" rx="1.3"/>
+                <rect x="112" y="302" width="10" height="22" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M135 197V219" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="130" y="203" width="10" height="7" rx="1.3"/>
+                <rect x="130" y="305" width="10" height="19" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M153 194V224" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="148" y="203" width="10" height="15" rx="1.3"/>
+                <rect x="148" y="300" width="10" height="24" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M171 162V229" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="166" y="174" width="10" height="44" rx="1.3"/>
+                <rect x="166" y="285" width="10" height="39" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M189 147V182" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="184" y="155" width="10" height="19" rx="1.3"/>
+                <rect x="184" y="296" width="10" height="28" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M207 136V168" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="202" y="147" width="10" height="8" rx="1.3"/>
+                <rect x="202" y="300" width="10" height="24" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M225 107V157" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="220" y="114" width="10" height="33" rx="1.3"/>
+                <rect x="220" y="299" width="10" height="25" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M243 104V145" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="238" y="114" width="10" height="24" rx="1.3"/>
+                <rect x="238" y="303" width="10" height="21" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M261 132V166" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="256" y="138" width="10" height="16" rx="1.3"/>
+                <rect x="256" y="305" width="10" height="19" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M279 133V163" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="274" y="142" width="10" height="12" rx="1.3"/>
+                <rect x="274" y="306" width="10" height="18" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M297 130V171" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="292" y="142" width="10" height="23" rx="1.3"/>
+                <rect x="292" y="300" width="10" height="24" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M315 136V176" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="310" y="144" width="10" height="21" rx="1.3"/>
+                <rect x="310" y="300" width="10" height="24" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M333 112V152" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="328" y="123" width="10" height="21" rx="1.3"/>
+                <rect x="328" y="299" width="10" height="25" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M351 116V157" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="346" y="123" width="10" height="21" rx="1.3"/>
+                <rect x="346" y="298" width="10" height="26" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M369 121V154" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="364" y="131" width="10" height="13" rx="1.3"/>
+                <rect x="364" y="301" width="10" height="23" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M387 125V152" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="382" y="131" width="10" height="14" rx="1.3"/>
+                <rect x="382" y="299" width="10" height="25" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M405 136V180" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="400" y="145" width="10" height="23" rx="1.3"/>
+                <rect x="400" y="294" width="10" height="30" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M423 124V177" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="418" y="136" width="10" height="32" rx="1.3"/>
+                <rect x="418" y="289" width="10" height="35" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M441 125V142" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="436" y="133" width="10" height="3" rx="1.3"/>
+                <rect x="436" y="314" width="10" height="10" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M459 109V144" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="454" y="120" width="10" height="13" rx="1.3"/>
+                <rect x="454" y="308" width="10" height="16" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M477 80V128" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="472" y="87" width="10" height="33" rx="1.3"/>
+                <rect x="472" y="297" width="10" height="27" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M495 77V129" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="490" y="87" width="10" height="29" rx="1.3"/>
+                <rect x="490" y="298" width="10" height="26" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M513 110V135" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="508" y="116" width="10" height="9" rx="1.3"/>
+                <rect x="508" y="307" width="10" height="17" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M531 116V136" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="526" y="125" width="10" height="4" rx="1.3"/>
+                <rect x="526" y="308" width="10" height="16" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M549 117V177" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="544" y="129" width="10" height="36" rx="1.3"/>
+                <rect x="544" y="292" width="10" height="32" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M567 142V174" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="562" y="150" width="10" height="15" rx="1.3"/>
+                <rect x="562" y="301" width="10" height="23" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M585 138V156" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="580" y="149" width="10" height="2" rx="1.3"/>
+                <rect x="580" y="307" width="10" height="17" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M603 142V190" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="598" y="149" width="10" height="30" rx="1.3"/>
+                <rect x="598" y="292" width="10" height="32" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#d6eda7">
+                <path d="M621 165V187" stroke="#d6eda7" stroke-width="1.8"/>
+                <rect x="616" y="175" width="10" height="4" rx="1.3"/>
+                <rect x="616" y="303" width="10" height="21" rx="1" opacity=".5"/>
+              </g>
+              <g fill="#78a89a">
+                <path d="M639 169V228" stroke="#78a89a" stroke-width="1.8"/>
+                <rect x="634" y="175" width="10" height="40" rx="1.3"/>
+                <rect x="634" y="285" width="10" height="39" rx="1" opacity=".5"/>
+              </g>
+              <polyline points="-9,173.6 9,193.8 27,212.0 45,227.6 63,240.6 81,239.0 99,233.8 117,227.8 135,217.0 153,212.6 171,206.0 189,192.0 207,179.4 225,161.6 243,145.6 261,141.6 279,139.0 297,142.6 315,148.6 333,145.6 351,143.6 369,141.4 387,137.4 405,142.2 423,144.8 441,142.6 459,140.4 477,128.8 495,118.4 513,116.2 531,115.4 549,124.4 567,137.0 585,143.6 603,154.4 621,163.6 639,173.6 657,193.8" fill="none" stroke="#d9b686" stroke-width="2.2" stroke-linejoin="round"/>
+            </g>
+            <clipPath id="market-bounds"><rect width="648" height="336"/></clipPath>
+          </defs>
+          <rect width="720" height="500" rx="16" fill="url(#market-panel)"/>
+          <svg x="36" y="46" width="648" height="410" viewBox="0 0 648 336" preserveAspectRatio="none">
+            <rect width="648" height="336" fill="url(#market-grid)"/>
+            <g clip-path="url(#market-bounds)">
+              <g class="candle-track">
+                <use href="#market-cycle"/>
+                <use href="#market-cycle" x="648"/>
+              </g>
+            </g>
+          </svg>
+        </svg>
       </div>
     </section>
     <section id="portfolio" class="work"><div class="wrap">
