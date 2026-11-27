@@ -7,232 +7,46 @@
   <meta name="description" content="Explore Kristian Roger Agdeppa’s work in Philippine real estate analytics, machine learning, and business intelligence.">
   <link rel="icon" href="images/xing.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="css/portfolio.css?v=chart-3">
+  <link rel="stylesheet" href="css/portfolio.css?v=ledger-1">
+  <script defer src="js/portfolio.js"></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
-  <header class="wrap">
+  <header><div class="masthead wrap">
     <a class="brand" href="#top" aria-label="Kristian Roger Agdeppa, home"><span class="monogram">KRA</span></a>
     <nav aria-label="Main navigation">
       <a href="#portfolio">Work</a><a href="#about">About</a><a href="#services">Résumé</a><a class="contact-link" href="#contact">Contact</a>
     </nav>
-  </header>
+  </div></header>
   <main id="main">
-    <section id="hero" class="hero wrap" aria-labelledby="name">
+    <section id="hero" class="hero" aria-labelledby="name"><div class="hero-inner wrap">
       <div>
         <p class="label role"><span aria-hidden="true"></span> Data science &amp; business intelligence</p>
         <h1 id="name">Kristian Roger<br><em>Agdeppa.</em></h1>
-        <p class="intro">I turn trading data, financial reports, and research datasets into dashboards and models that help people make decisions.</p>
+        <p class="intro">I build dashboards for trading operations and study the companies behind Philippine real estate investment trusts.</p>
         <div class="actions"><a class="button" href="#portfolio">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="resume/Agdeppa_KristianRoger_CV.pdf">View CV</a></div>
       </div>
-      <div class="market-chart" role="group" aria-label="Illustrative market chart">
-        <input class="chart-pause" type="checkbox" id="pause-chart" aria-label="Pause chart animation">
-        <label for="pause-chart" class="chart-control"><span aria-hidden="true"></span></label>
-        <svg class="chart-plot" width="720" height="500" viewBox="0 0 720 500" aria-hidden="true" focusable="false">
+      <figure class="market-chart">
+        <figcaption><span>Price &amp; volume</span><span class="simulation">Simulated data</span></figcaption>
+        <div class="quote-row" hidden>
+          <dl class="quotes">
+            <div><dt>Open</dt><dd data-price="open"></dd></div><div><dt>High</dt><dd data-price="high"></dd></div>
+            <div><dt>Low</dt><dd data-price="low"></dd></div><div><dt>Close</dt><dd data-price="close"></dd></div>
+          </dl>
+          <button class="chart-toggle" type="button" aria-label="Pause chart animation" hidden><span aria-hidden="true"></span></button>
+        </div>
+        <svg class="chart-plot" viewBox="0 0 600 288" aria-hidden="true" focusable="false">
           <defs>
-            <linearGradient id="market-panel" x2="1" y2="1"><stop stop-color="#1b4236"/><stop offset="1" stop-color="#102a24"/></linearGradient>
-            <pattern id="market-grid" width="81" height="56" patternUnits="userSpaceOnUse">
-              <path d="M0 56V0H81" fill="none" stroke="#3a594d" stroke-width="1" vector-effect="non-scaling-stroke"/>
-            </pattern>
-            <g id="market-cycle">
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M9 209V215 M9 251V257" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="4" y="215" width="10" height="36" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="4" y="298" width="10" height="26" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M27 231V240 M27 251V262" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="22" y="240" width="10" height="11"/>
-                <rect x="22" y="309" width="10" height="15" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M45 228V240 M45 257V265" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="40" y="240" width="10" height="17" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="40" y="305" width="10" height="19" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M63 232V240 M63 257V270" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="58" y="240" width="10" height="17"/>
-                <rect x="58" y="304" width="10" height="20" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M81 196V207 M81 240V250" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="76" y="207" width="10" height="33"/>
-                <rect x="76" y="295" width="10" height="29" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M99 200V207 M99 225V232" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="94" y="207" width="10" height="18" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="94" y="302" width="10" height="22" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M117 200V210 M117 225V237" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="112" y="210" width="10" height="15"/>
-                <rect x="112" y="302" width="10" height="22" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M135 197V203 M135 210V219" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="130" y="203" width="10" height="7"/>
-                <rect x="130" y="305" width="10" height="19" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M153 194V203 M153 218V224" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="148" y="203" width="10" height="15" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="148" y="300" width="10" height="24" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M171 162V174 M171 218V229" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="166" y="174" width="10" height="44"/>
-                <rect x="166" y="285" width="10" height="39" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M189 147V155 M189 174V182" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="184" y="155" width="10" height="19"/>
-                <rect x="184" y="296" width="10" height="28" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M207 136V147 M207 155V168" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="202" y="147" width="10" height="8"/>
-                <rect x="202" y="300" width="10" height="24" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M225 107V114 M225 147V157" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="220" y="114" width="10" height="33"/>
-                <rect x="220" y="299" width="10" height="25" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M243 104V114 M243 138V145" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="238" y="114" width="10" height="24" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="238" y="303" width="10" height="21" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M261 132V138 M261 154V166" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="256" y="138" width="10" height="16" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="256" y="305" width="10" height="19" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M279 133V142 M279 154V163" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="274" y="142" width="10" height="12"/>
-                <rect x="274" y="306" width="10" height="18" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M297 130V142 M297 165V171" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="292" y="142" width="10" height="23" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="292" y="300" width="10" height="24" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M315 136V144 M315 165V176" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="310" y="144" width="10" height="21"/>
-                <rect x="310" y="300" width="10" height="24" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M333 112V123 M333 144V152" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="328" y="123" width="10" height="21"/>
-                <rect x="328" y="299" width="10" height="25" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M351 116V123 M351 144V157" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="346" y="123" width="10" height="21" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="346" y="298" width="10" height="26" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M369 121V131 M369 144V154" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="364" y="131" width="10" height="13"/>
-                <rect x="364" y="301" width="10" height="23" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M387 125V131 M387 145V152" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="382" y="131" width="10" height="14" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="382" y="299" width="10" height="25" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M405 136V145 M405 168V180" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="400" y="145" width="10" height="23" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="400" y="294" width="10" height="30" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M423 124V136 M423 168V177" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="418" y="136" width="10" height="32"/>
-                <rect x="418" y="289" width="10" height="35" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M441 125V133 M441 136V142" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="436" y="133" width="10" height="3"/>
-                <rect x="436" y="314" width="10" height="10" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M459 109V120 M459 133V144" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="454" y="120" width="10" height="13"/>
-                <rect x="454" y="308" width="10" height="16" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M477 80V87 M477 120V128" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="472" y="87" width="10" height="33"/>
-                <rect x="472" y="297" width="10" height="27" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M495 77V87 M495 116V129" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="490" y="87" width="10" height="29" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="490" y="298" width="10" height="26" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M513 110V116 M513 125V135" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="508" y="116" width="10" height="9" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="508" y="307" width="10" height="17" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M531 116V125 M531 129V136" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="526" y="125" width="10" height="4" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="526" y="308" width="10" height="16" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M549 117V129 M549 165V177" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="544" y="129" width="10" height="36" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="544" y="292" width="10" height="32" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M567 142V150 M567 165V174" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="562" y="150" width="10" height="15"/>
-                <rect x="562" y="301" width="10" height="23" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M585 138V149 M585 151V156" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="580" y="149" width="10" height="2"/>
-                <rect x="580" y="307" width="10" height="17" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M603 142V149 M603 179V190" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="598" y="149" width="10" height="30" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="598" y="292" width="10" height="32" opacity=".58"/>
-              </g>
-              <g color="#d6eda7" fill="currentColor">
-                <path d="M621 165V175 M621 179V187" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="616" y="175" width="10" height="4"/>
-                <rect x="616" y="303" width="10" height="21" opacity=".58"/>
-              </g>
-              <g color="#8bb9ad" fill="currentColor">
-                <path d="M639 169V175 M639 215V228" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="634" y="175" width="10" height="40" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                <rect x="634" y="285" width="10" height="39" opacity=".58"/>
-              </g>
-              <polyline points="-9,173.6 9,193.8 27,212.0 45,227.6 63,240.6 81,239.0 99,233.8 117,227.8 135,217.0 153,212.6 171,206.0 189,192.0 207,179.4 225,161.6 243,145.6 261,141.6 279,139.0 297,142.6 315,148.6 333,145.6 351,143.6 369,141.4 387,137.4 405,142.2 423,144.8 441,142.6 459,140.4 477,128.8 495,118.4 513,116.2 531,115.4 549,124.4 567,137.0 585,143.6 603,154.4 621,163.6 639,173.6 657,193.8" fill="none" stroke="#d9b686" stroke-width="1.4" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
-            </g>
-            <clipPath id="market-bounds"><rect width="648" height="336"/></clipPath>
+            <clipPath id="plot-bounds"><rect width="600" height="288"/></clipPath>
+            <pattern id="plot-grid" width="72" height="48" patternUnits="userSpaceOnUse"><path d="M72 0H0V48" fill="none" stroke="#335253" stroke-width="1.2"/></pattern>
           </defs>
-          <rect width="720" height="500" rx="16" fill="url(#market-panel)"/>
-          <svg x="36" y="46" width="648" height="410" viewBox="0 0 648 336" preserveAspectRatio="none">
-            <rect width="648" height="336" fill="url(#market-grid)"/>
-            <g clip-path="url(#market-bounds)">
-              <g class="candle-track">
-                <g class="candle-advance">
-                  <use href="#market-cycle"/>
-                  <use href="#market-cycle" x="648"/>
-                </g>
-              </g>
-            </g>
-          </svg>
+          <rect width="600" height="288" fill="url(#plot-grid)"/>
+          <image class="chart-fallback" href="images/market-chart.svg" width="600" height="288" preserveAspectRatio="none"/>
+          <g clip-path="url(#plot-bounds)"><g class="trades"></g></g>
         </svg>
-      </div>
+        <div class="chart-key"><span>Price candles</span><span>5-bar average</span><span>Volume</span></div>
+      </figure>
+    </div>
     </section>
     <section id="portfolio" class="work"><div class="wrap">
       <h2>Selected work<span>.</span></h2>
@@ -240,7 +54,11 @@
         <a class="cover" href="https://public.tableau.com/app/profile/kristian.agdeppa/viz/PHRealEstateInvestmentTrust/Summary" aria-label="Open the Philippine REIT dashboard"><img src="images/portfolio/robinsons-work@2.jpg" alt="Illuminated retail complex at dusk" width="1400" height="932"></a>
         <div class="feature-body"><p class="label">Finance / Data visualization</p>
           <h3>Philippine REIT dashboard</h3>
-          <p>As a REIT investor, I wanted to compare dividends with the performance of the properties behind them. I built this Tableau dashboard to bring revenue, occupancy, and payouts into one view.</p>
+          <p>How do a REIT’s dividends compare with the performance of its properties? I gathered company reports and market data in Google Sheets, then built a Tableau dashboard to explore the figures side by side.</p>
+          <dl class="research-metrics">
+            <div><dt>Financials</dt><dd>Revenue, EBITDA margin, dividends</dd></div>
+            <div><dt>Properties</dt><dd>Occupancy, leasable area, lease expiry</dd></div>
+          </dl>
           <a class="text-link" href="https://public.tableau.com/app/profile/kristian.agdeppa/viz/PHRealEstateInvestmentTrust/Summary">Explore dashboard</a>
         </div>
       </article>
@@ -248,7 +66,7 @@
         <article class="project">
           <img loading="lazy" src="images/portfolio/uti-pic-work@2.jpg" alt="" width="1400" height="933">
           <p class="label">Bioinformatics</p><h3>Classifying UTI test results</h3>
-          <p>Can a model flag a possible UTI from urinalysis results? This project compares classifiers and examines both missed infections and false alarms.</p><a class="text-link" aria-label="View repository for Classifying UTI test results" href="https://github.com/kr-agdeppa/UTI-Diagnosis-Classification">View repository</a>
+          <p>I built a data retrieval and validation pipeline for urinalysis records, then used Optuna to tune a voting ensemble. The study examines missed infections and false alarms.</p><a class="text-link" aria-label="View repository for Classifying UTI test results" href="https://github.com/kr-agdeppa/UTI-Diagnosis-Classification">View repository</a>
         </article>
         <article class="project">
           <img loading="lazy" src="images/portfolio/baybayin-work@2.jpg" alt="" width="1400" height="933">
@@ -265,15 +83,15 @@
     <section id="about" class="wrap section split">
       <div><h2>About me<span>.</span></h2><img class="portrait" loading="lazy" src="images/kristian-agdeppa.webp" width="720" height="720" alt="Kristian Roger Agdeppa"></div>
       <div><p class="lead">I’m a data science professional based in Misamis Oriental, Philippines.</p><p>I work with trading records and operational data to understand where money moves and where work slows down. My interest in investing led me to build a Philippine REIT dashboard and study CFA Level I topics independently.</p>
-        <h3 class="small-title">Tools I work with</h3>
-        <dl><dt>Analysis &amp; modeling</dt><dd>Python, exploratory data analysis, machine learning</dd><dt>Databases</dt><dd>SQL Server, MySQL</dd><dt>Visualization &amp; reporting</dt><dd>Power BI, Tableau, Metabase, PowerPoint</dd></dl>
+        <h3 class="small-title">Methods &amp; tools</h3>
+        <dl><dt>Analysis &amp; modeling</dt><dd>Python for exploratory analysis, model training, and evaluation</dd><dt>Databases</dt><dd>SQL Server and MySQL for querying and validating records</dd><dt>Visualization &amp; reporting</dt><dd>Power BI, Tableau, Metabase, PowerPoint</dd></dl>
       </div>
     </section>
     <section id="services" class="wrap section split">
       <div><h2>Résumé<span>.</span></h2><a class="text-link" href="resume/Agdeppa_KristianRoger_CV.pdf">View full CV (PDF)</a></div>
       <div><h3 class="label">Professional experience</h3>
-        <article class="entry"><h4>Business Intelligence Officer</h4><b>AI-BI Ltd.</b><p>Used SQL, Power BI, and Metabase to report on profit and loss, commissions, and swaps across three trading platforms. Reconciled account balances and reviewed trading activity for signs of platform abuse.</p></article>
-        <article class="entry"><h4>Business Analyst</h4><b>Greenergy Development Corp.</b><p>Automated six finance and procurement procedures with Google Apps Script and the Gmail API. Built dashboards that helped departments complete deliverables 20% faster.</p></article>
+        <article class="entry"><span class="date">Oct 2025 onwards</span><h4>Business Intelligence Officer</h4><b>AI-BI Ltd.</b><p>Queried MT4, MT5, and TradeLocker records to report on profit and loss, commissions, swaps, and traded lots. Checked account equity and balances against trading activity before publishing Power BI and Metabase reports.</p></article>
+        <article class="entry"><span class="date">Jul 2024 – Jul 2025</span><h4>Business Analyst</h4><b>Greenergy Development Corp.</b><p>Built an approval tracker with Google Apps Script and the Gmail API to automate six finance and procurement procedures. Google Sheets and Tableau dashboards helped departments track their targets and complete deliverables 20% faster.</p></article>
         <h3 class="label education">Education &amp; credentials</h3>
         <article class="entry"><h4>BS in Data Science</h4><p>University of Science and Technology of Southern Philippines · Cum laude</p></article>
         <p><a class="text-link" href="https://digitalcredentials.aigproexcellence.com/en/verify/72927388984433">Lean Six Sigma Yellow Belt</a></p>
@@ -282,7 +100,7 @@
     </section>
   </main>
   <footer id="contact"><div class="wrap">
-    <h2>Get in touch<span>.</span></h2>
+    <h2>Get in touch<span>.</span></h2><p class="contact-intro">Have a trading report, investment dataset, or research question you’d like to explore? I’d like to hear about it.</p>
     <a class="email" href="mailto:kristianrogeragdeppa@pm.me">kristianrogeragdeppa@pm.me</a>
     <p><a href="tel:+639983424158">+63 998 3424 158</a></p>
     <div class="foot"><span>Misamis Oriental, Philippines</span><nav aria-label="Social profiles"><a href="https://github.com/kr-agdeppa">GitHub</a><a href="https://www.linkedin.com/in/kristian-roger-m-agdeppa-a84675246">LinkedIn</a><a href="https://www.kaggle.com/avarice02">Kaggle</a></nav></div>
