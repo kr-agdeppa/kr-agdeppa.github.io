@@ -1,6 +1,6 @@
 :root {
-  --ink: #152d27;
-  --green: #31664d;
+  --ink: #152f32;
+  --green: #277064;
   --muted: #4d6057;
   --line: #c8d2c9;
   --paper: #fafbf8;
@@ -17,15 +17,16 @@ img { display: block; max-width: 100%; }
 .wrap { width: min(88%, 76rem); margin-inline: auto; }
 .skip { position: absolute; left: .5rem; top: .5rem; transform: translateY(-160%); z-index: 2; padding: .6rem; background: white; }
 .skip:focus { transform: none; }
-header, nav, .brand, .actions, .foot { display: flex; align-items: center; }
-header { min-height: 5.3rem; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.masthead, nav, .brand, .actions, .foot { display: flex; align-items: center; }
+header, .hero { background: #102d30; color: #f3f7ef; }
+.masthead { min-height: 5.3rem; justify-content: space-between; border-bottom: 1px solid #426064; }
 nav { gap: clamp(.9rem, 3vw, 2.4rem); font-size: .95rem; }
 .brand { min-height: 44px; }
-.monogram { position: relative; padding: .16em .4em .16em .27em; border-left: 3px solid #82976a; color: var(--ink); font: italic 600 2rem/1 Georgia, serif; letter-spacing: -.11em; }
+.monogram { position: relative; padding: .16em .4em .16em .27em; border-left: 3px solid #a4c6a1; color: #d8efb9; font: italic 600 2rem/1 Georgia, serif; letter-spacing: -.11em; }
 .brand:hover { text-decoration: none; }
-.monogram::after { content: ""; position: absolute; right: 0; bottom: .18em; width: .16em; height: .16em; background: var(--green); border-radius: 50%; }
+.monogram::after { content: ""; position: absolute; right: 0; bottom: .18em; width: .16em; height: .16em; background: #d8efb9; border-radius: 50%; }
 .contact-link { border: 1px solid var(--line); padding: .42rem 1rem; border-radius: 2rem; }
-.hero { display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: 6%; padding-block: clamp(3.5rem, 7vw, 7rem); }
+.hero-inner { display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: 6%; padding-block: clamp(3.5rem, 7vw, 7rem); }
 .label { font: 600 .79rem/1.5 "Courier New", monospace; text-transform: uppercase; letter-spacing: .09em; color: var(--green); }
 .role { display: flex; align-items: center; gap: .65rem; margin: 0 0 1.35rem; }
 .role span { width: .55rem; height: .55rem; flex: none; border-radius: 50%; background: #628c50; }
@@ -39,53 +40,37 @@ h1 em, h2 span { color: var(--green); }
 .button:hover { background: var(--green); text-decoration: none; }
 .text-link { display: inline-block; font-weight: 600; border-bottom: 1px solid #8d9e91; }
 .text-link:hover { color: var(--green); text-decoration: none; border-color: currentColor; }
-.market-chart {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
-.chart-plot { display: block; width: 100%; height: auto; }
-#market-cycle rect, #market-cycle path, #market-grid path { shape-rendering: crispEdges; }
-.chart-control, .chart-pause { display: none; }
-@media (prefers-reduced-motion: no-preference) {
-  /* Each cycle contains 36 candles on an 18-unit pitch. The inner group
-     finishes its glide exactly when the outer group takes the next step. */
-  .candle-track { --tick: 1.25s; animation: market-scroll calc(36 * var(--tick)) steps(36, end) infinite; }
-  .candle-advance { animation: candle-advance var(--tick) infinite; }
-  @keyframes candle-advance {
-    0%, 52% { transform: translateX(0); animation-timing-function: cubic-bezier(.4, 0, .2, 1); }
-    100% { transform: translateX(-18px); }
-  }
-  @keyframes market-scroll { to { transform: translateX(-648px); } }
-  .chart-pause { display: block; position: absolute; width: 1px; height: 1px; clip-path: inset(50%); }
-  .chart-control {
-    display: grid;
-    position: absolute;
-    z-index: 1;
-    top: .35rem;
-    right: .35rem;
-    width: 44px;
-    height: 44px;
-    cursor: pointer;
-    place-items: center;
-  }
-  .chart-control span {
-    display: grid;
-    width: 1.85rem;
-    height: 1.85rem;
-    border: 1px solid #638071;
-    border-radius: 50%;
-    place-items: center;
-    background: #19392e;
-  }
-  .chart-control span::after { content: ""; width: 4px; height: 10px; border-inline: 2px solid #dcf0d4; }
-  .chart-pause:focus-visible + .chart-control span { outline: 2px solid #dcf0d4; outline-offset: 2px; }
-  .chart-pause:checked + .chart-control span::after {
-    width: 0; height: 0; margin-left: 2px; border: 5px solid transparent; border-right: 0; border-left: 8px solid #dcf0d4;
-  }
-  .chart-pause:checked ~ .chart-plot :is(.candle-track, .candle-advance) { animation-play-state: paused; }
-}
-.work { padding-block: clamp(3rem, 5vw, 5rem); background: #ecf1e9; border-block: 1px solid var(--line); }
+.hero h1 em { color: #cde6af; }
+.hero .role { color: #b8d3c2; }
+.hero .role span { background: #b9db87; }
+.hero .intro { color: #cfddd8; }
+.hero .button { background: #d5ebb5; color: #163234; }
+.hero .button:hover { background: #e6f6ce; }
+.hero .text-link:hover { color: #d5ebb5; }
+.market-chart { min-width: 0; border: 1px solid #476467; border-radius: .8rem; padding: clamp(.85rem, 2vw, 1.6rem); background: linear-gradient(145deg,#1f4042,#112c2f); }
+.market-chart figcaption, .quote-row, .quotes, .chart-key { display: flex; align-items: center; }
+.market-chart figcaption, .quote-row { justify-content: space-between; gap: .65rem; }
+.market-chart figcaption { padding-bottom: .8rem; border-bottom: 1px solid #426164; font-family: Georgia,serif; font-size: clamp(1.15rem,2vw,1.5rem); }
+.simulation, .quotes dt, .chart-key, .date { font: .82rem/1.4 "Courier New", monospace; }
+.simulation { color: #c3d8ce; }
+.quotes { gap: clamp(.6rem,1.6vw,1.3rem); }
+.quotes > div { min-width: 5.1ch; }
+.quotes dt, .quotes dd { padding: 0; border: 0; }
+.quotes dt { color: #bed2ce; font-size: .75rem; }
+.quotes dd { color: #e5efdf; font: .88rem/1.5 "Courier New",monospace; }
+.quote-row { margin-block: 1rem .7rem; }
+.chart-toggle { width: 44px; height: 44px; flex: none; cursor: pointer; border: 1px solid #65817d; border-radius: 50%; background: transparent; color: #dbedc4; display: grid; place-items: center; }
+.chart-toggle:focus-visible { outline: 2px solid #d5ebb5; outline-offset: 2px; }
+.chart-toggle span { width: 7px; height: 11px; border-inline: 2px solid; }
+.chart-toggle[data-paused] span { width: 0; height: 0; border: 6px solid transparent; border-right: 0; border-left: 9px solid currentColor; }
+[hidden] { display: none !important; }
+.chart-plot { display: block; width: 100%; height: auto; margin-top: .7rem; }
+.trades rect, .trades path { shape-rendering: crispEdges; }
+.chart-key { gap: .75rem 1.15rem; flex-wrap: wrap; margin-top: .8rem; color: #d1dfd9; font-size: .78rem; }
+.chart-key span::before { content: ""; display: inline-block; width: .48rem; height: .48rem; margin-right: .35rem; background: #cde6af; }
+.chart-key span:nth-child(2)::before { background: #e0b78c; height: 2px; vertical-align: middle; }
+.chart-key span:nth-child(3)::before { background: #829995; }
+.work { padding-block: clamp(3rem, 5vw, 5rem); background: #f1f4f0; border-block: 1px solid var(--line); }
 h2 { font-size: clamp(2.6rem, 4.6vw, 4.6rem); line-height: 1.1; letter-spacing: -.055em; margin-bottom: 1.8rem; }
 .feature { display: grid; grid-template-columns: 1.15fr 1fr; background: var(--paper); border: 1px solid var(--line); border-radius: .75rem; overflow: hidden; }
 .cover { display: block; overflow: hidden; }
@@ -113,21 +98,43 @@ footer h2 span { color: #bedb96; }
 .email { font-size: clamp(1.12rem, 3vw, 2.5rem); overflow-wrap: anywhere; }
 .foot { border-top: 1px solid #54695b; padding-top: 1.4rem; margin-top: 3rem; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 @media (max-width: 48rem) {
-  .hero, .feature, .split { grid-template-columns: 1fr; gap: 2rem; }
-  .hero { padding-block: 3rem; }
-  .market-chart { max-width: 34rem; }
+  .hero-inner, .feature, .split { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-inner { padding-block: 3rem; }
   .feature { gap: 0; }
   .projects { grid-template-columns: 1fr; gap: 2.5rem; }
   .cover img { aspect-ratio: 1.85; }
   .split h2 { margin-bottom: 1rem; }
 }
 @media (max-width: 36rem) {
-  header { padding-block: 1rem; flex-wrap: wrap; gap: .9rem; }
-  header nav { width: 100%; justify-content: space-between; }
+  .masthead { padding-block: 1rem; flex-wrap: wrap; gap: .9rem; }
+  .masthead nav { width: 100%; justify-content: space-between; }
   .wrap { width: 90%; }
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
   .cover img { transition: transform .35s ease; }
   .cover:hover img { transform: scale(1.025); }
+}
+
+.research-metrics { margin: 1.4rem 0; }
+.research-metrics > div { display: grid; grid-template-columns: 5.3rem 1fr; gap: .8rem; padding-block: .55rem; border-top: 1px solid var(--line); font-size: .95rem; }
+.research-metrics dt, .research-metrics dd { padding: 0; border: 0; }
+.project { border-top: 2px solid #98afa2; padding-top: 1rem; }
+.entry { position: relative; border-left: 1px solid var(--line); padding: 1.1rem 0 1.2rem 1.4rem; }
+.entry::before { content: ""; position: absolute; left: -4px; top: 1.5rem; width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
+.date { color: var(--green); }
+.entry h4 { margin-block: .3rem; }
+.contact-intro { max-width: 34rem; color: #d6e3db; margin-bottom: 1.5rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-inner > div, .market-chart, .in-view { animation: section-arrival .56s cubic-bezier(.2,.75,.25,1) both; }
+  .market-chart { animation-delay: .09s; }
+  @keyframes section-arrival { from { opacity: .35; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .button span { transition: transform .2s ease; }
+  .button:hover span { transform: translateY(3px); }
+}
+@media (max-width: 23rem) {
+  .quotes { gap: .32rem; }
+  .quotes > div { min-width: 0; }
+  .quotes dd { font-size: .8rem; min-width: 6ch; }
+  .quote-row { gap: .3rem; }
 }
