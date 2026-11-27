@@ -42,29 +42,13 @@ h1 em, h2 span { color: var(--green); }
 .market-chart {
   position: relative;
   width: 100%;
-  aspect-ratio: 600 / 416;
-  overflow: hidden;
-  border-radius: .8rem;
-  background: linear-gradient(145deg, #1b4236, #102a24);
+  min-width: 0;
 }
-.market-window {
-  position: absolute;
-  inset: 9% 4.5% 8%;
-  overflow: hidden;
-  border-bottom: 1px solid #557162;
-  background-image: linear-gradient(to right, #39584b 1px, transparent 1px),
-                    linear-gradient(to bottom, #39584b 1px, transparent 1px);
-  background-size: 12.5% 16.67%;
-}
-.market-series {
-  width: 200%;
-  height: 100%;
-  background: url("../images/market-chart.svg") repeat-x left center / 50% 100%;
-}
+.chart-plot { display: block; width: 100%; height: auto; }
 .chart-control, .chart-pause { display: none; }
 @media (prefers-reduced-motion: no-preference) {
-  .market-series { animation: market-scroll 40s linear infinite; }
-  @keyframes market-scroll { to { transform: translateX(-50%); } }
+  .candle-track { animation: market-scroll 40s linear infinite; }
+  @keyframes market-scroll { to { transform: translateX(-648px); } }
   .chart-pause { display: block; position: absolute; width: 1px; height: 1px; clip-path: inset(50%); }
   .chart-control {
     display: grid;
@@ -91,7 +75,7 @@ h1 em, h2 span { color: var(--green); }
   .chart-pause:checked + .chart-control span::after {
     width: 0; height: 0; margin-left: 2px; border: 5px solid transparent; border-right: 0; border-left: 8px solid #dcf0d4;
   }
-  .chart-pause:checked ~ .market-window .market-series { animation-play-state: paused; }
+  .chart-pause:checked ~ .chart-plot .candle-track { animation-play-state: paused; }
 }
 .work { padding-block: clamp(3rem, 5vw, 5rem); background: #ecf1e9; border-block: 1px solid var(--line); }
 h2 { font-size: clamp(2.6rem, 4.6vw, 4.6rem); line-height: 1.1; letter-spacing: -.055em; margin-bottom: 1.8rem; }
