@@ -154,5 +154,22 @@ function animateMarket(chart) {
   syncPlayback();
 }
 
+function scrollSkills(skills) {
+  const list = skills.querySelector(".skills-list");
+  const copy = list.cloneNode(true);
+  copy.setAttribute("aria-hidden", "true");
+  copy.removeAttribute("aria-labelledby");
+  list.after(copy);
+
+  const button = skills.querySelector(".skills-toggle");
+  button.hidden = false;
+  button.addEventListener("click", () => {
+    const paused = skills.classList.toggle("is-paused");
+    button.setAttribute("aria-label", paused ? "Resume skill icons" : "Pause skill icons");
+  });
+  skills.classList.add("is-ready");
+}
+
+scrollSkills(document.querySelector(".skills"));
 revealSections();
 animateMarket(document.querySelector(".market-chart"));

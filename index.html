@@ -7,8 +7,8 @@
   <meta name="description" content="Explore Kristian Roger Agdeppa’s work in Philippine real estate analytics, machine learning, and business intelligence.">
   <link rel="icon" href="images/xing.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="css/portfolio.css?v=ledger-1">
-  <script defer src="js/portfolio.js"></script>
+  <link rel="stylesheet" href="css/portfolio.css?v=skills-1">
+  <script defer src="js/portfolio.js?v=skills-1"></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -80,11 +80,39 @@
         </article>
       </div>
     </div></section>
-    <section id="about" class="wrap section split">
-      <div><h2>About me<span>.</span></h2><img class="portrait" loading="lazy" src="images/kristian-agdeppa.webp" width="720" height="720" alt="Kristian Roger Agdeppa"></div>
-      <div><p class="lead">I’m a data science professional based in Misamis Oriental, Philippines.</p><p>I work with trading records and operational data to understand where money moves and where work slows down. My interest in investing led me to build a Philippine REIT dashboard and study CFA Level I topics independently.</p>
-        <h3 class="small-title">Methods &amp; tools</h3>
-        <dl><dt>Analysis &amp; modeling</dt><dd>Python for exploratory analysis, model training, and evaluation</dd><dt>Databases</dt><dd>SQL Server and MySQL for querying and validating records</dd><dt>Visualization &amp; reporting</dt><dd>Power BI, Tableau, Metabase, PowerPoint</dd></dl>
+    <section id="about" aria-labelledby="about-title" class="wrap section">
+      <h2 id="about-title">About me<span>.</span></h2>
+      <div class="about-layout">
+        <div class="portrait-column">
+          <img class="portrait" loading="lazy" src="images/kristian-agdeppa.webp" width="720" height="720" alt="Kristian Roger Agdeppa">
+        </div>
+        <div class="about-bio">
+          <p class="lead">I’m a data science professional based in Misamis Oriental, Philippines.</p><p>I work with trading records and operational data to understand where money moves and where work slows down. My interest in investing led me to build a Philippine REIT dashboard and study CFA Level I topics independently.</p>
+          <div class="skills">
+            <div class="skills-heading">
+              <h3 class="small-title" id="skills-title">Skills, methods &amp; tools</h3>
+              <button class="skills-toggle" type="button" aria-controls="skills-strip" aria-label="Pause skill icons" hidden><span aria-hidden="true"></span></button>
+            </div>
+            <div class="skills-window" id="skills-strip">
+              <div class="skills-track">
+                <ul class="skills-list" aria-labelledby="skills-title">
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#python"/></svg><span>Python</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#eda"/></svg><span>Exploratory analysis</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#sql-server"/></svg><span>SQL Server</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#power-bi"/></svg><span>Power BI</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#modeling"/></svg><span>Model training</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#tableau"/></svg><span>Tableau</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#mysql"/></svg><span>MySQL</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#evaluation"/></svg><span>Model evaluation</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#metabase"/></svg><span>Metabase</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#sheets"/></svg><span>Google Sheets</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#javascript"/></svg><span>JavaScript</span></li>
+                  <li><svg aria-hidden="true" focusable="false" viewBox="0 0 40 40"><use href="images/skills.svg#ppt"/></svg><span>PowerPoint</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="services" class="wrap section split">
