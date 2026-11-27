@@ -45,9 +45,17 @@ h1 em, h2 span { color: var(--green); }
   min-width: 0;
 }
 .chart-plot { display: block; width: 100%; height: auto; }
+#market-cycle rect, #market-cycle path, #market-grid path { shape-rendering: crispEdges; }
 .chart-control, .chart-pause { display: none; }
 @media (prefers-reduced-motion: no-preference) {
-  .candle-track { animation: market-scroll 40s linear infinite; }
+  /* Each cycle contains 36 candles on an 18-unit pitch. The inner group
+     finishes its glide exactly when the outer group takes the next step. */
+  .candle-track { --tick: 1.25s; animation: market-scroll calc(36 * var(--tick)) steps(36, end) infinite; }
+  .candle-advance { animation: candle-advance var(--tick) infinite; }
+  @keyframes candle-advance {
+    0%, 52% { transform: translateX(0); animation-timing-function: cubic-bezier(.4, 0, .2, 1); }
+    100% { transform: translateX(-18px); }
+  }
   @keyframes market-scroll { to { transform: translateX(-648px); } }
   .chart-pause { display: block; position: absolute; width: 1px; height: 1px; clip-path: inset(50%); }
   .chart-control {
@@ -75,7 +83,7 @@ h1 em, h2 span { color: var(--green); }
   .chart-pause:checked + .chart-control span::after {
     width: 0; height: 0; margin-left: 2px; border: 5px solid transparent; border-right: 0; border-left: 8px solid #dcf0d4;
   }
-  .chart-pause:checked ~ .chart-plot .candle-track { animation-play-state: paused; }
+  .chart-pause:checked ~ .chart-plot :is(.candle-track, .candle-advance) { animation-play-state: paused; }
 }
 .work { padding-block: clamp(3rem, 5vw, 5rem); background: #ecf1e9; border-block: 1px solid var(--line); }
 h2 { font-size: clamp(2.6rem, 4.6vw, 4.6rem); line-height: 1.1; letter-spacing: -.055em; margin-bottom: 1.8rem; }
