@@ -25,7 +25,11 @@
         <p class="intro">I turn trading data, financial reports, and research datasets into dashboards and models that help people make decisions.</p>
         <div class="actions"><a class="button" href="#portfolio">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="resume/Agdeppa_KristianRoger_CV.pdf">View CV</a></div>
       </div>
-      <img class="market-chart" src="images/market-chart.svg" width="600" height="416" alt="">
+      <div class="market-chart" role="group" aria-label="Illustrative market chart">
+        <input class="chart-pause" type="checkbox" id="pause-chart" aria-label="Pause chart animation">
+        <label for="pause-chart" class="chart-control"><span aria-hidden="true"></span></label>
+        <div class="market-window" aria-hidden="true"><div class="market-series"></div></div>
+      </div>
     </section>
     <section id="portfolio" class="work"><div class="wrap">
       <h2>Selected work<span>.</span></h2>
@@ -65,7 +69,7 @@
     <section id="services" class="wrap section split">
       <div><h2>Résumé<span>.</span></h2><a class="text-link" href="resume/Agdeppa_KristianRoger_CV.pdf">View full CV (PDF)</a></div>
       <div><h3 class="label">Professional experience</h3>
-        <article class="entry"><h4>Business Intelligence Officer</h4><b>AI-BI Ltd.</b><p>Built SQL reports and dashboards for MT4, MT5, and TradeLocker trading data. Analyzed profit and loss, commissions, swaps, and platform abuse, and reconciled balances to verify reports.</p></article>
+        <article class="entry"><h4>Business Intelligence Officer</h4><b>AI-BI Ltd.</b><p>Used SQL, Power BI, and Metabase to report on profit and loss, commissions, and swaps across three trading platforms. Reconciled account balances and reviewed trading activity for signs of platform abuse.</p></article>
         <article class="entry"><h4>Business Analyst</h4><b>Greenergy Development Corp.</b><p>Automated six finance and procurement procedures with Google Apps Script and the Gmail API. Built dashboards that helped departments complete deliverables 20% faster.</p></article>
         <h3 class="label education">Education &amp; credentials</h3>
         <article class="entry"><h4>BS in Data Science</h4><p>University of Science and Technology of Southern Philippines · Cum laude</p></article>

@@ -39,7 +39,60 @@ h1 em, h2 span { color: var(--green); }
 .button:hover { background: var(--green); text-decoration: none; }
 .text-link { display: inline-block; font-weight: 600; border-bottom: 1px solid #8d9e91; }
 .text-link:hover { color: var(--green); text-decoration: none; border-color: currentColor; }
-.market-chart { width: 100%; height: auto; border-radius: .8rem; }
+.market-chart {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 600 / 416;
+  overflow: hidden;
+  border-radius: .8rem;
+  background: linear-gradient(145deg, #1b4236, #102a24);
+}
+.market-window {
+  position: absolute;
+  inset: 9% 4.5% 8%;
+  overflow: hidden;
+  border-bottom: 1px solid #557162;
+  background-image: linear-gradient(to right, #39584b 1px, transparent 1px),
+                    linear-gradient(to bottom, #39584b 1px, transparent 1px);
+  background-size: 12.5% 16.67%;
+}
+.market-series {
+  width: 200%;
+  height: 100%;
+  background: url("../images/market-chart.svg") repeat-x left center / 50% 100%;
+}
+.chart-control, .chart-pause { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .market-series { animation: market-scroll 40s linear infinite; }
+  @keyframes market-scroll { to { transform: translateX(-50%); } }
+  .chart-pause { display: block; position: absolute; width: 1px; height: 1px; clip-path: inset(50%); }
+  .chart-control {
+    display: grid;
+    position: absolute;
+    z-index: 1;
+    top: .35rem;
+    right: .35rem;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    place-items: center;
+  }
+  .chart-control span {
+    display: grid;
+    width: 1.85rem;
+    height: 1.85rem;
+    border: 1px solid #638071;
+    border-radius: 50%;
+    place-items: center;
+    background: #19392e;
+  }
+  .chart-control span::after { content: ""; width: 4px; height: 10px; border-inline: 2px solid #dcf0d4; }
+  .chart-pause:focus-visible + .chart-control span { outline: 2px solid #dcf0d4; outline-offset: 2px; }
+  .chart-pause:checked + .chart-control span::after {
+    width: 0; height: 0; margin-left: 2px; border: 5px solid transparent; border-right: 0; border-left: 8px solid #dcf0d4;
+  }
+  .chart-pause:checked ~ .market-window .market-series { animation-play-state: paused; }
+}
 .work { padding-block: clamp(3rem, 5vw, 5rem); background: #ecf1e9; border-block: 1px solid var(--line); }
 h2 { font-size: clamp(2.6rem, 4.6vw, 4.6rem); line-height: 1.1; letter-spacing: -.055em; margin-bottom: 1.8rem; }
 .feature { display: grid; grid-template-columns: 1.15fr 1fr; background: var(--paper); border: 1px solid var(--line); border-radius: .75rem; overflow: hidden; }
