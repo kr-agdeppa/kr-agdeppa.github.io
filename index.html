@@ -7,8 +7,8 @@
   <meta name="description" content="Explore Kristian Roger Agdeppa’s work in Philippine real estate analytics, machine learning, and business intelligence.">
   <link rel="icon" href="images/xing.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="css/portfolio.css?v=skills-1">
-  <script defer src="js/portfolio.js?v=skills-1"></script>
+  <link rel="stylesheet" href="css/portfolio.css?v=relative-1">
+  <script defer src="js/portfolio.js?v=relative-1"></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -26,25 +26,36 @@
         <p class="intro">I build dashboards for trading operations and study the companies behind Philippine real estate investment trusts.</p>
         <div class="actions"><a class="button" href="#portfolio">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="resume/Agdeppa_KristianRoger_CV.pdf">View CV</a></div>
       </div>
-      <figure class="market-chart">
-        <figcaption><span>Price &amp; volume</span><span class="simulation">Simulated data</span></figcaption>
-        <div class="quote-row" hidden>
-          <dl class="quotes">
-            <div><dt>Open</dt><dd data-price="open"></dd></div><div><dt>High</dt><dd data-price="high"></dd></div>
-            <div><dt>Low</dt><dd data-price="low"></dd></div><div><dt>Close</dt><dd data-price="close"></dd></div>
-          </dl>
-          <button class="chart-toggle" type="button" aria-label="Pause chart animation" hidden><span aria-hidden="true"></span></button>
-        </div>
-        <svg class="chart-plot" viewBox="0 0 600 288" aria-hidden="true" focusable="false">
+      <figure class="performance" aria-labelledby="performance-title">
+        <figcaption>
+          <span class="performance-note">Simulated · Base 100</span>
+          <span class="performance-title" id="performance-title">Portfolio performance</span>
+        </figcaption>
+        <svg class="performance-plot" viewBox="0 0 520 238" role="img" aria-labelledby="performance-desc" focusable="false">
+          <title id="performance-desc">From January to December, the illustrative portfolio rises from 100 to 128 and its benchmark rises from 100 to 114.</title>
           <defs>
-            <clipPath id="plot-bounds"><rect width="600" height="288"/></clipPath>
-            <pattern id="plot-grid" width="72" height="48" patternUnits="userSpaceOnUse"><path d="M72 0H0V48" fill="none" stroke="#335253" stroke-width="1.2"/></pattern>
+            <linearGradient id="return-fill" x2="0" y2="1">
+              <stop stop-color="#bfe6a6" stop-opacity=".16"/><stop offset="1" stop-color="#bfe6a6" stop-opacity="0"/>
+            </linearGradient>
           </defs>
-          <rect width="600" height="288" fill="url(#plot-grid)"/>
-          <image class="chart-fallback" href="images/market-chart.svg" width="600" height="288" preserveAspectRatio="none"/>
-          <g clip-path="url(#plot-bounds)"><g class="trades"></g></g>
+          <g class="plot-guides"><path d="M32 37H464 M32 90H464 M32 143H464 M32 196H464"/></g>
+          <g class="plot-axis">
+            <text x="0" y="41">130</text><text x="0" y="94">120</text>
+            <text x="0" y="147">110</text><text x="0" y="200">100</text>
+            <text x="32" y="229">Jan</text><text x="140" y="229">Apr</text>
+            <text x="248" y="229">Jul</text><text x="356" y="229">Oct</text><text x="464" y="229" text-anchor="end">Dec</text>
+          </g>
+          <polygon fill="url(#return-fill)" points="32,196 41,190.9 50,194.4 59,180.7 68,180.1 77,187.2 86,180.5 95,187.1 104,190.7 113,179.2 122,173.5 131,171.3 140,158.9 149,159.4 158,167.8 167,159.3 176,164.2 185,163.3 194,148.4 203,147.6 212,143 221,147.2 230,158.1 239,171.2 248,174.8 257,165 266,162.3 275,143.2 284,137.7 293,138 302,124.3 311,125.4 320,121.8 329,119.2 338,124.1 347,129.9 356,127.1 365,116.3 374,111.7 383,91.3 392,84.7 401,91.4 410,84.3 419,92.6 428,95.3 437,79.3 446,71.5 455,63.5 464,47.6 464,207 32,207"/>
+          <polyline class="plot-line portfolio-line" points="32,196 41,190.9 50,194.4 59,180.7 68,180.1 77,187.2 86,180.5 95,187.1 104,190.7 113,179.2 122,173.5 131,171.3 140,158.9 149,159.4 158,167.8 167,159.3 176,164.2 185,163.3 194,148.4 203,147.6 212,143 221,147.2 230,158.1 239,171.2 248,174.8 257,165 266,162.3 275,143.2 284,137.7 293,138 302,124.3 311,125.4 320,121.8 329,119.2 338,124.1 347,129.9 356,127.1 365,116.3 374,111.7 383,91.3 392,84.7 401,91.4 410,84.3 419,92.6 428,95.3 437,79.3 446,71.5 455,63.5 464,47.6"/>
+          <polyline class="plot-line benchmark-line" points="32,196 41,190.6 50,199.1 59,191.9 68,190.7 77,192.2 86,185.2 95,178.8 104,180.1 113,178.5 122,171.9 131,180.3 140,174.8 149,172.2 158,183.4 167,178.4 176,180.1 185,180.4 194,171.5 203,164.4 212,164.2 221,168.9 230,169.5 239,184.4 248,185.4 257,176.4 266,181 275,168.8 284,164.2 293,164.6 302,155.1 311,148.7 320,148.3 329,150.1 338,148.6 347,160.7 356,158.9 365,148.8 374,152 383,138 392,132.4 401,139.5 410,136.2 419,137 428,143 437,136.5 446,127.7 455,131.6 464,121.8"/>
+          <g class="end-values"><text x="477" y="52" fill="#d2edb4">128</text><text x="477" y="127" fill="#e6bf92">114</text></g>
+          <g class="time-probe" aria-hidden="true">
+            <path class="probe-rule" d="M0 25V203"/>
+            <circle class="portfolio-dot" r="4.3" fill="#d2edb4"/>
+            <circle class="benchmark-dot" r="3.6" fill="#e6bf92"/>
+          </g>
         </svg>
-        <div class="chart-key"><span>Price candles</span><span>5-bar average</span><span>Volume</span></div>
+        <div class="performance-key" aria-hidden="true"><span>Portfolio</span><span>Benchmark</span></div>
       </figure>
     </div>
     </section>
@@ -89,10 +100,7 @@
         <div class="about-bio">
           <p class="lead">I’m a data science professional based in Misamis Oriental, Philippines.</p><p>I work with trading records and operational data to understand where money moves and where work slows down. My interest in investing led me to build a Philippine REIT dashboard and study CFA Level I topics independently.</p>
           <div class="skills">
-            <div class="skills-heading">
-              <h3 class="small-title" id="skills-title">Skills, methods &amp; tools</h3>
-              <button class="skills-toggle" type="button" aria-controls="skills-strip" aria-label="Pause skill icons" hidden><span aria-hidden="true"></span></button>
-            </div>
+            <h3 class="small-title" id="skills-title">Skills, methods &amp; tools</h3>
             <div class="skills-window" id="skills-strip">
               <div class="skills-track">
                 <ul class="skills-list" aria-labelledby="skills-title">
